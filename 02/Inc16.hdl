@@ -14,22 +14,6 @@ CHIP Inc16 {
 
     PARTS:
    // Put you code here:
-    Xor(a=in[0], b=in[0], out=zero );
-    Not(in=zero, out=one);
-    Add16(a=in, b[0]=one,
-                b[1]=zero, 
-                b[3]=zero,
-                b[4]=zero,
-                b[5]=zero,
-                b[6]=zero,
-                b[7]=zero,
-                b[8]=zero,
-                b[9]=zero,
-                b[10]=zero,
-                b[11]=zero,
-                b[12]=zero,
-                b[13]=zero,
-                b[14]=zero,
-                b[15]=zero, out=out);
+    Add16(a=in, b[0]=true, out=out);
     
 }
