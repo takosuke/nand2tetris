@@ -8,27 +8,32 @@
 
 // Put your code here.
 
-    @R2
+// SETUP
+
+    @R2    // initialize result to 0
     M=0
-(LOOP)
-    @R1
+
+(LOOP)     // we will add R0 to R2 recursively R1 times
+
+    @R1    // If R1==0, exit - result is 0
     D=M
     @END
     D;JEQ
-    @R0
+    @R0    // If R0==0, exit - result is 0
     D=M
     @END
     D;JEQ
-    @R2
+    @R2    // with R0 still selected, add it to R2
     D=D+M
     M=D
-    @R1
+    @R1    // substract 1 to R1
     M=M-1 
     D=M
-    @END
+    @END   // if R1==0, we are done
     D;JEQ
-    @LOOP
+    @LOOP  // else, go back to loop
     0;JMP
+
 (END)
     @END
     0;JMP
