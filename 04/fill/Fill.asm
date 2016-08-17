@@ -18,7 +18,7 @@
 // Setup
 
                // Create a variable for the number of screen memory registers 
-    @8191      // 32*256 = 8192 screen memory registers to fill (-1 because zero indexed)
+    @8191      // 32*256 = 8192 screen memory registers to fill 1 because zero indexed)
     D=A
     @numwords
     M=D
